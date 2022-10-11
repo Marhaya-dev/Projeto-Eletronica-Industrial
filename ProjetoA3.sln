@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoA3", "ProjetoA3\ProjetoA3.csproj", "{BE4F9441-27F9-44AF-81B7-8AE2324D15A2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProjetoA3.Installer", "ProjetoA3.Installer\ProjetoA3.Installer.vdproj", "{28FDEC73-8D8E-445A-8384-DAF2A7F0DD4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE4F9441-27F9-44AF-81B7-8AE2324D15A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4F9441-27F9-44AF-81B7-8AE2324D15A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4F9441-27F9-44AF-81B7-8AE2324D15A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4F9441-27F9-44AF-81B7-8AE2324D15A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FDEC73-8D8E-445A-8384-DAF2A7F0DD4F}.Debug|Any CPU.ActiveCfg = Debug
+		{28FDEC73-8D8E-445A-8384-DAF2A7F0DD4F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3B599D0-18EE-4F41-A5B2-46714410625F}
+	EndGlobalSection
+EndGlobal
