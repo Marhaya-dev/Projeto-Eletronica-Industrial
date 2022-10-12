@@ -3,6 +3,8 @@ namespace ProjetoA3.Domain.Settings
 {
     public class Dados
     {
+        public string? TensaoGerador { get; set; }
+        public string? Frequencia { get; set; }
         public string? R1 { get; set; }
         public string? R2 { get; set; }
         public string? R3 { get; set; }

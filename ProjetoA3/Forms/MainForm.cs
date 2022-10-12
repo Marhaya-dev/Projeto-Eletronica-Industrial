@@ -30,6 +30,20 @@ namespace ProjetoA3.Forms
 
         public bool ValidateInput()
         {
+            if (string.IsNullOrWhiteSpace(txtGerador.Text))
+            {
+                Alert($"Por favor, informe a tensão do gerador.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtFrequencia.Text))
+            {
+                Alert($"Por favor, informe a frequência do gerador.");
+
+                return false;
+            }
+
             if (string.IsNullOrWhiteSpace(txtR1.Text))
             {
                 Alert($"Por favor, informe o valor da Resistência 1.");
@@ -79,6 +93,8 @@ namespace ProjetoA3.Forms
         {
             var result = new Dados();
 
+            result.TensaoGerador = txtGerador.Text;
+            result.Frequencia = txtFrequencia.Text;
             result.R1 = txtR1.Text;
             result.R2 = txtR2.Text;
             result.R3 = txtR3.Text;
@@ -112,6 +128,8 @@ namespace ProjetoA3.Forms
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            txtGerador.Clear();
+            txtFrequencia.Clear();
             txtR1.Clear();
             txtR2.Clear();
             txtR3.Clear();
