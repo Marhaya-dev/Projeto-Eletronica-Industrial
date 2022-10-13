@@ -7,5 +7,8 @@
     <Compile Update="Forms\ResultadosP1Form.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ResultadosP2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

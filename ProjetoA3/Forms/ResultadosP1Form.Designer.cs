@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dtgR1 = new System.Windows.Forms.DataGridView();
+            this.labelCorrenteTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgR1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,28 +42,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(98, 22);
+            this.label2.Location = new System.Drawing.Point(155, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 15);
+            this.label2.Size = new System.Drawing.Size(103, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Corrente Total:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(185, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(73, 23);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "10";
+            this.label2.Text = "Corrente Total (A):";
             // 
             // dtgR1
             // 
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgR1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgR1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dtgR1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtgR1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -83,7 +73,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgR1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgR1.Location = new System.Drawing.Point(15, 58);
+            this.dtgR1.Location = new System.Drawing.Point(18, 12);
             this.dtgR1.Name = "dtgR1";
             this.dtgR1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -94,18 +84,30 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgR1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgR1.RowHeadersWidth = 40;
             this.dtgR1.RowTemplate.Height = 25;
+            this.dtgR1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dtgR1.ShowEditingIcon = false;
-            this.dtgR1.Size = new System.Drawing.Size(359, 175);
-            this.dtgR1.TabIndex = 26;
+            this.dtgR1.Size = new System.Drawing.Size(306, 173);
+            this.dtgR1.TabIndex = 0;
+            // 
+            // labelCorrenteTotal
+            // 
+            this.labelCorrenteTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.labelCorrenteTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCorrenteTotal.Location = new System.Drawing.Point(261, 195);
+            this.labelCorrenteTotal.Name = "labelCorrenteTotal";
+            this.labelCorrenteTotal.Size = new System.Drawing.Size(63, 23);
+            this.labelCorrenteTotal.TabIndex = 3;
+            this.labelCorrenteTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ResultadosP1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 246);
+            this.ClientSize = new System.Drawing.Size(345, 234);
+            this.Controls.Add(this.labelCorrenteTotal);
             this.Controls.Add(this.dtgR1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -122,7 +124,7 @@
 
         #endregion
         private Label label2;
-        private TextBox textBox2;
         private DataGridView dtgR1;
+        private Label labelCorrenteTotal;
     }
 }

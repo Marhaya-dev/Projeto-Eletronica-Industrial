@@ -19,3 +19,5 @@ C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.csproj.CopyComplete
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosP2Form.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Properties.Resources.resources

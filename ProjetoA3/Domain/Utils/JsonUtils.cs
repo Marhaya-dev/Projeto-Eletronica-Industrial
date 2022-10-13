@@ -9,36 +9,67 @@ namespace ProjetoA3.Domain.Utils
     public static class JsonUtils
     {
         private static readonly string FileName = "appsettings.json";
-        private static readonly string SectionName = "Dados";
+        private static readonly string SectionNameP1 = "DadosP1";
+        private static readonly string SectionNameP2 = "DadosP2";
 
-        public static void Save(Dados settings)
+        public static void SaveP1(DadosP1 settings)
         {
             var appsettings = JObject.Parse(File.ReadAllText(FileName));
 
             var newSection = JObject.FromObject(settings);
 
-            if (appsettings.ContainsKey(SectionName))
+            if (appsettings.ContainsKey(SectionNameP1))
             {
-                appsettings.Remove(SectionName);
+                appsettings.Remove(SectionNameP1);
             }
 
-            appsettings.Add(SectionName, newSection);
+            appsettings.Add(SectionNameP1, newSection);
 
             var file = JsonConvert.SerializeObject(appsettings, Formatting.Indented);
 
             File.WriteAllText(FileName, file);
         }
 
-        public static Dados Read()
+        public static DadosP1 ReadP1()
         {
             var json = JObject.Parse(File.ReadAllText(FileName));
 
-            if (json.ContainsKey(SectionName))
+            if (json.ContainsKey(SectionNameP1))
             {
-                return json[SectionName].ToObject<Dados>();
+                return json[SectionNameP1].ToObject<DadosP1>();
             }
 
-            return new Dados();
+            return new DadosP1();
+        }
+
+        public static void SaveP2(DadosP2 settings)
+        {
+            var appsettings = JObject.Parse(File.ReadAllText(FileName));
+
+            var newSection = JObject.FromObject(settings);
+
+            if (appsettings.ContainsKey(SectionNameP2))
+            {
+                appsettings.Remove(SectionNameP2);
+            }
+
+            appsettings.Add(SectionNameP2, newSection);
+
+            var file = JsonConvert.SerializeObject(appsettings, Formatting.Indented);
+
+            File.WriteAllText(FileName, file);
+        }
+
+        public static DadosP2 ReadP2()
+        {
+            var json = JObject.Parse(File.ReadAllText(FileName));
+
+            if (json.ContainsKey(SectionNameP2))
+            {
+                return json[SectionNameP2].ToObject<DadosP2>();
+            }
+
+            return new DadosP2();
         }
     }
 }

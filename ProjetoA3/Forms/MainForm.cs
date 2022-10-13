@@ -89,18 +89,18 @@ namespace ProjetoA3.Forms
             return true;
         }
 
-        public Dados GetInput()
+        public DadosP1 GetInput()
         {
-            var result = new Dados();
+            var result = new DadosP1();
 
-            result.TensaoGerador = txtGerador.Text;
-            result.Frequencia = txtFrequencia.Text;
-            result.R1 = txtR1.Text;
-            result.R2 = txtR2.Text;
-            result.R3 = txtR3.Text;
-            result.R4 = txtR4.Text;
-            result.R5 = txtR5.Text;
-            result.R6 = txtR6.Text;
+            result.TensaoGerador = Convert.ToDouble(txtGerador.Text);
+            result.Frequencia = Convert.ToDouble(txtFrequencia.Text);
+            result.R1 = Convert.ToDouble(txtR1.Text);
+            result.R2 = Convert.ToDouble(txtR2.Text);
+            result.R3 = Convert.ToDouble(txtR3.Text);
+            result.R4 = Convert.ToDouble(txtR4.Text);
+            result.R5 = Convert.ToDouble(txtR5.Text);
+            result.R6 = Convert.ToDouble(txtR6.Text);
 
             return result;
         }
@@ -111,7 +111,7 @@ namespace ProjetoA3.Forms
             {
                 var input = GetInput();
 
-                JsonUtils.Save(input);
+                JsonUtils.SaveP1(input);
 
                 return true;
             }
@@ -136,6 +136,17 @@ namespace ProjetoA3.Forms
             txtR4.Clear();
             txtR5.Clear();
             txtR6.Clear();
+        }
+
+        private void btnCalcular2_Click(object sender, EventArgs e)
+        {
+            var form = new ResultadosP2Form();
+            form.ShowDialog();
+        }
+
+        private void btnLimpar2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
