@@ -20,46 +20,46 @@ namespace ProjetoA3.Forms
         }
 
         private void ResultadosP1Form_Load(object sender, EventArgs e)
-        {
-            var dados = JsonUtils.ReadP1();
-
-            var resultados = Calcular(dados);
+        {        
+            var resultados = Calcular();
 
             LoadDtg(resultados);
         }
 
-        private ResultadosP1 Calcular(DadosP1 dados)
+        private static ResultadosP1 Calcular()
         {
+            var dados = JsonUtils.ReadP1();
             var resultadosP1 = new ResultadosP1();
 
-            List<double> listaResistores = new List<double>()
+            var paraleloR1 = 1 / (1 / dados.R1);
+            var paraleloR6 = 1 / (1 / dados.R6);
+
+            List<double> listaResistores = new()
             {
-                dados.R1,
+                paraleloR1,
+                paraleloR6,
                 dados.R2,
                 dados.R3,
                 dados.R4,
                 dados.R5,
-                dados.R6,
             };
 
             resultadosP1.CorrenteTotal = dados.TensaoGerador / listaResistores.Sum();
 
-            var correnteParalela = (dados.TensaoGerador / dados.R1) + (dados.TensaoGerador / dados.R6);
-
-            resultadosP1.CorrenteR1 = correnteParalela;
-            resultadosP1.CorrenteR6 = correnteParalela;
+            resultadosP1.CorrenteR1 = dados.TensaoGerador / (paraleloR1 + paraleloR6);
+            resultadosP1.CorrenteR6 = dados.TensaoGerador / (paraleloR1 + paraleloR6);
 
             resultadosP1.CorrenteR2 = resultadosP1.CorrenteTotal;
             resultadosP1.CorrenteR3 = resultadosP1.CorrenteTotal;
             resultadosP1.CorrenteR4 = resultadosP1.CorrenteTotal;
             resultadosP1.CorrenteR5 = resultadosP1.CorrenteTotal;
 
-            resultadosP1.PotenciaR1 = dados.TensaoGerador / dados.R1;
-            resultadosP1.PotenciaR2 = dados.TensaoGerador / dados.R2;
-            resultadosP1.PotenciaR3 = dados.TensaoGerador / dados.R3;
-            resultadosP1.PotenciaR4 = dados.TensaoGerador / dados.R4;
-            resultadosP1.PotenciaR5 = dados.TensaoGerador / dados.R5;
-            resultadosP1.PotenciaR6 = dados.TensaoGerador / dados.R6;
+            resultadosP1.PotenciaR1 = dados.TensaoGerador * resultadosP1.CorrenteR1;
+            resultadosP1.PotenciaR2 = dados.TensaoGerador * resultadosP1.CorrenteR2;
+            resultadosP1.PotenciaR3 = dados.TensaoGerador * resultadosP1.CorrenteR3;
+            resultadosP1.PotenciaR4 = dados.TensaoGerador * resultadosP1.CorrenteR4;
+            resultadosP1.PotenciaR5 = dados.TensaoGerador * resultadosP1.CorrenteR5;
+            resultadosP1.PotenciaR6 = dados.TensaoGerador * resultadosP1.CorrenteR6;
 
             return resultadosP1;
         }
@@ -68,7 +68,7 @@ namespace ProjetoA3.Forms
         {
             dtgR1.Columns.Add("resistor", "Resistor");
             dtgR1.Columns.Add("corrente", "Corrente (A)");
-            dtgR1.Columns.Add("potencia", "Potência (P)");
+            dtgR1.Columns.Add("potencia", "Potência (W)");
 
             dtgR1.Rows.Add(new object[] { "R1", $"{resultados.CorrenteR1:N2}", $"{resultados.PotenciaR1:N2}" });
             dtgR1.Rows.Add(new object[] { "R2", $"{resultados.CorrenteR2:N2}", $"{resultados.PotenciaR2:N2}" });
