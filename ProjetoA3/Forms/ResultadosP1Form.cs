@@ -20,7 +20,7 @@ namespace ProjetoA3.Forms
         }
 
         private void ResultadosP1Form_Load(object sender, EventArgs e)
-        {        
+        {
             var resultados = Calcular();
 
             LoadDtg(resultados);
@@ -31,35 +31,18 @@ namespace ProjetoA3.Forms
             var dados = JsonUtils.ReadP1();
             var resultadosP1 = new ResultadosP1();
 
-            var paraleloR1 = 1 / (1 / dados.R1);
-            var paraleloR6 = 1 / (1 / dados.R6);
+            var multiplicacao = (dados.R1 + dados.R2 + dados.R6 + dados.R5) / dados.R6;
+            var corrente2 = (- dados.TensaoGerador + (dados.TensaoReceptor * multiplicacao)) / (- (dados.R6*multiplicacao) - (dados.R3*multiplicacao) - (dados.R4*multiplicacao) + dados.R6);
+            var corrente1 = (- dados.TensaoGerador - (corrente2 * dados.R6)) / (- dados.R1 - dados.R2 - dados.R6 - dados.R5);
 
-            List<double> listaResistores = new()
-            {
-                paraleloR1,
-                paraleloR6,
-                dados.R2,
-                dados.R3,
-                dados.R4,
-                dados.R5,
-            };
+            resultadosP1.CorrenteR1 = corrente1;
+            resultadosP1.CorrenteR2 = corrente1;
+            resultadosP1.CorrenteR3 = corrente2;
+            resultadosP1.CorrenteR4 = corrente2;
+            resultadosP1.CorrenteR5 = corrente1;
+            resultadosP1.CorrenteR6 = (corrente1 -corrente2);
 
-            resultadosP1.CorrenteTotal = dados.TensaoGerador / listaResistores.Sum();
-
-            resultadosP1.CorrenteR1 = dados.TensaoGerador / (paraleloR1 + paraleloR6);
-            resultadosP1.CorrenteR6 = dados.TensaoGerador / (paraleloR1 + paraleloR6);
-
-            resultadosP1.CorrenteR2 = resultadosP1.CorrenteTotal;
-            resultadosP1.CorrenteR3 = resultadosP1.CorrenteTotal;
-            resultadosP1.CorrenteR4 = resultadosP1.CorrenteTotal;
-            resultadosP1.CorrenteR5 = resultadosP1.CorrenteTotal;
-
-            resultadosP1.PotenciaR1 = dados.TensaoGerador * resultadosP1.CorrenteR1;
-            resultadosP1.PotenciaR2 = dados.TensaoGerador * resultadosP1.CorrenteR2;
-            resultadosP1.PotenciaR3 = dados.TensaoGerador * resultadosP1.CorrenteR3;
-            resultadosP1.PotenciaR4 = dados.TensaoGerador * resultadosP1.CorrenteR4;
-            resultadosP1.PotenciaR5 = dados.TensaoGerador * resultadosP1.CorrenteR5;
-            resultadosP1.PotenciaR6 = dados.TensaoGerador * resultadosP1.CorrenteR6;
+            resultadosP1.CorrenteTotal = Math.Abs(corrente1) + Math.Abs(corrente2);
 
             return resultadosP1;
         }

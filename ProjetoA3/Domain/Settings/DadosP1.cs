@@ -3,6 +3,7 @@
     public class DadosP1
     {
         public double TensaoGerador { get; set; }
+        public double TensaoReceptor { get; set; }
         public double Frequencia { get; set; }
         public double R1 { get; set; }
         public double R2 { get; set; }

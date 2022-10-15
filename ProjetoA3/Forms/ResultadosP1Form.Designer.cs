@@ -42,7 +42,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(155, 199);
+            this.label2.Location = new System.Drawing.Point(160, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 15);
             this.label2.TabIndex = 1;
@@ -88,14 +88,14 @@
             this.dtgR1.RowTemplate.Height = 25;
             this.dtgR1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dtgR1.ShowEditingIcon = false;
-            this.dtgR1.Size = new System.Drawing.Size(306, 173);
+            this.dtgR1.Size = new System.Drawing.Size(311, 173);
             this.dtgR1.TabIndex = 0;
             // 
             // labelCorrenteTotal
             // 
             this.labelCorrenteTotal.BackColor = System.Drawing.SystemColors.Window;
             this.labelCorrenteTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelCorrenteTotal.Location = new System.Drawing.Point(261, 195);
+            this.labelCorrenteTotal.Location = new System.Drawing.Point(266, 195);
             this.labelCorrenteTotal.Name = "labelCorrenteTotal";
             this.labelCorrenteTotal.Size = new System.Drawing.Size(63, 23);
             this.labelCorrenteTotal.TabIndex = 3;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 234);
+            this.ClientSize = new System.Drawing.Size(348, 234);
             this.Controls.Add(this.labelCorrenteTotal);
             this.Controls.Add(this.dtgR1);
             this.Controls.Add(this.label2);

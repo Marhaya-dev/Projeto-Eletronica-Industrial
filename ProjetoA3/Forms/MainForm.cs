@@ -29,6 +29,20 @@ namespace ProjetoA3.Forms
             }
         }
 
+        public bool SaveInput()
+        {
+            if (ValidateInput())
+            {
+                var input = GetInput();
+
+                JsonUtils.SaveP1(input);
+
+                return true;
+            }
+
+            return false;
+        }
+
         public bool ValidateInput()
         {           
             if (string.IsNullOrWhiteSpace(txtGerador.Text))
@@ -101,42 +115,42 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (!double.TryParse(txtR1.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR1.Text, out zero))
             {
                 Alert($"Resistência 1 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR2.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR2.Text, out zero) )
             {
                 Alert($"Resistência 2 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR3.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR3.Text, out zero) )
             {
                 Alert($"Resistência 3 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR4.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR4.Text, out zero) )
             {
                 Alert($"Resistência 4 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR5.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR5.Text, out zero) )
             {
                 Alert($"Resistência 5 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR6.Text, out zero) || zero == 0)
+            if (!double.TryParse(txtR6.Text, out zero) )
             {
                 Alert($"Resistência 6 inválida.");
 
@@ -158,22 +172,9 @@ namespace ProjetoA3.Forms
             result.R4 = Convert.ToDouble(txtR4.Text.Replace(".", ","));
             result.R5 = Convert.ToDouble(txtR5.Text.Replace(".", ","));
             result.R6 = Convert.ToDouble(txtR6.Text.Replace(".", ","));
+            result.TensaoReceptor = Convert.ToDouble(cBoxReceptor.SelectedValue);
 
             return result;
-        }
-
-        public bool SaveInput()
-        {
-            if (ValidateInput())
-            {
-                var input = GetInput();
-
-                JsonUtils.SaveP1(input);
-
-                return true;
-            }
-
-            return false;
         }
 
         public static DialogResult Alert(string message)
@@ -193,6 +194,7 @@ namespace ProjetoA3.Forms
             txtR4.Clear();
             txtR5.Clear();
             txtR6.Clear();
+            cBoxReceptor.SelectedItem = null;
         }
 
         private void btnCalcular2_Click(object sender, EventArgs e)
@@ -204,6 +206,24 @@ namespace ProjetoA3.Forms
         private void btnLimpar2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadReceptores();
+        }
+
+        private void LoadReceptores()
+        {
+            var items = new Dictionary<string, string>()
+            {
+                { "127", "Ventilador 127V" },
+                { "220", "Liquidificador 220V" }
+            };
+
+            cBoxReceptor.ValueMember = "Key";
+            cBoxReceptor.DisplayMember = "Value";
+            cBoxReceptor.DataSource = new BindingSource(items, null);
         }
     }
 }
