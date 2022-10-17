@@ -1,14 +1,5 @@
 ﻿using ProjetoA3.Domain.Settings;
 using ProjetoA3.Domain.Utils;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoA3.Forms
 {
@@ -32,17 +23,25 @@ namespace ProjetoA3.Forms
             var resultadosP1 = new ResultadosP1();
 
             var multiplicacao = (dados.R1 + dados.R2 + dados.R6 + dados.R5) / dados.R6;
-            var corrente2 = (- dados.TensaoGerador + (dados.TensaoReceptor * multiplicacao)) / (- (dados.R6*multiplicacao) - (dados.R3*multiplicacao) - (dados.R4*multiplicacao) + dados.R6);
-            var corrente1 = (- dados.TensaoGerador - (corrente2 * dados.R6)) / (- dados.R1 - dados.R2 - dados.R6 - dados.R5);
+            var corrente3 = (- dados.TensaoGerador + (dados.TensaoReceptor * multiplicacao)) / ( - ((dados.R6 + dados.R3 + dados.R4)*multiplicacao) + dados.R6);
+            var corrente1 = (- dados.TensaoGerador - (corrente3 * dados.R6)) / (- dados.R1 - dados.R2 - dados.R6 - dados.R5);
+            var corrente2 = corrente1 - corrente3;
 
             resultadosP1.CorrenteR1 = corrente1;
             resultadosP1.CorrenteR2 = corrente1;
-            resultadosP1.CorrenteR3 = corrente2;
-            resultadosP1.CorrenteR4 = corrente2;
+            resultadosP1.CorrenteR3 = corrente3;
+            resultadosP1.CorrenteR4 = corrente3;
             resultadosP1.CorrenteR5 = corrente1;
-            resultadosP1.CorrenteR6 = (corrente1 -corrente2);
+            resultadosP1.CorrenteR6 = corrente2;
 
-            resultadosP1.CorrenteTotal = Math.Abs(corrente1) + Math.Abs(corrente2);
+            resultadosP1.CorrenteTotal = corrente1 + corrente2 + corrente3;
+
+            resultadosP1.PotenciaR1 = dados.R1 * (Math.Pow(corrente1, 2));
+            resultadosP1.PotenciaR2 = dados.R2 * (Math.Pow(corrente1, 2));
+            resultadosP1.PotenciaR3 = dados.R3 * (Math.Pow(corrente3, 2));
+            resultadosP1.PotenciaR4 = dados.R4 * (Math.Pow(corrente3, 2));
+            resultadosP1.PotenciaR5 = dados.R5 * (Math.Pow(corrente1, 2));
+            resultadosP1.PotenciaR6 = dados.R6 * (Math.Pow(corrente2, 2));
 
             return resultadosP1;
         }
