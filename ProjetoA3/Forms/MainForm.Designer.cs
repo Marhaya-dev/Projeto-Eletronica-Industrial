@@ -55,20 +55,39 @@
             this.txtR2 = new System.Windows.Forms.TextBox();
             this.txtR1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTensaoSecundaria = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtResistenciaP2 = new System.Windows.Forms.TextBox();
             this.btnLimpar2 = new System.Windows.Forms.Button();
             this.btnCalcular2 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.portaNxorControl = new ProjetoA3.Forms.PortaNxorControl();
+            this.portaXorControl = new ProjetoA3.Forms.PortaXorControl();
+            this.portaNorControl = new ProjetoA3.Forms.PortaNorControl();
+            this.portaOrControl = new ProjetoA3.Forms.PortaOrControl();
+            this.portaNandControl = new ProjetoA3.Forms.PortaNandControl();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxPortas = new System.Windows.Forms.ComboBox();
+            this.portaNotControl = new ProjetoA3.Forms.PortaNotControl();
+            this.portaAndControl = new ProjetoA3.Forms.PortaAndControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -308,6 +327,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.btnLimpar2);
             this.tabPage2.Controls.Add(this.btnCalcular2);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -317,6 +338,62 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Parte 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(251, 7);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(536, 371);
+            this.groupBox4.TabIndex = 21;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Circuito";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtTensaoSecundaria);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtResistenciaP2);
+            this.groupBox3.Location = new System.Drawing.Point(16, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(224, 121);
+            this.groupBox3.TabIndex = 20;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dados:";
+            // 
+            // txtTensaoSecundaria
+            // 
+            this.txtTensaoSecundaria.Location = new System.Drawing.Point(141, 34);
+            this.txtTensaoSecundaria.Name = "txtTensaoSecundaria";
+            this.txtTensaoSecundaria.Size = new System.Drawing.Size(63, 23);
+            this.txtTensaoSecundaria.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Tensão Secundária (V):";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(96, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 15);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "R1 (Ω):";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtResistenciaP2
+            // 
+            this.txtResistenciaP2.Location = new System.Drawing.Point(141, 72);
+            this.txtResistenciaP2.Name = "txtResistenciaP2";
+            this.txtResistenciaP2.Size = new System.Drawing.Size(63, 23);
+            this.txtResistenciaP2.TabIndex = 16;
             // 
             // btnLimpar2
             // 
@@ -338,6 +415,98 @@
             this.btnCalcular2.UseVisualStyleBackColor = true;
             this.btnCalcular2.Click += new System.EventHandler(this.btnCalcular2_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.portaNxorControl);
+            this.tabPage3.Controls.Add(this.portaXorControl);
+            this.tabPage3.Controls.Add(this.portaNorControl);
+            this.tabPage3.Controls.Add(this.portaOrControl);
+            this.tabPage3.Controls.Add(this.portaNandControl);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.comboBoxPortas);
+            this.tabPage3.Controls.Add(this.portaNotControl);
+            this.tabPage3.Controls.Add(this.portaAndControl);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(804, 424);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Simulação de Circuitos Digitais";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // portaNxorControl
+            // 
+            this.portaNxorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaNxorControl.Location = new System.Drawing.Point(15, 57);
+            this.portaNxorControl.Name = "portaNxorControl";
+            this.portaNxorControl.Size = new System.Drawing.Size(774, 352);
+            this.portaNxorControl.TabIndex = 8;
+            // 
+            // portaXorControl
+            // 
+            this.portaXorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaXorControl.Location = new System.Drawing.Point(15, 57);
+            this.portaXorControl.Name = "portaXorControl";
+            this.portaXorControl.Size = new System.Drawing.Size(774, 352);
+            this.portaXorControl.TabIndex = 7;
+            // 
+            // portaNorControl
+            // 
+            this.portaNorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaNorControl.Location = new System.Drawing.Point(15, 57);
+            this.portaNorControl.Name = "portaNorControl";
+            this.portaNorControl.Size = new System.Drawing.Size(774, 352);
+            this.portaNorControl.TabIndex = 6;
+            // 
+            // portaOrControl
+            // 
+            this.portaOrControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaOrControl.Location = new System.Drawing.Point(15, 57);
+            this.portaOrControl.Name = "portaOrControl";
+            this.portaOrControl.Size = new System.Drawing.Size(774, 352);
+            this.portaOrControl.TabIndex = 5;
+            // 
+            // portaNandControl
+            // 
+            this.portaNandControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaNandControl.Location = new System.Drawing.Point(15, 57);
+            this.portaNandControl.Name = "portaNandControl";
+            this.portaNandControl.Size = new System.Drawing.Size(774, 352);
+            this.portaNandControl.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 15);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Portas Lógicas:";
+            // 
+            // comboBoxPortas
+            // 
+            this.comboBoxPortas.FormattingEnabled = true;
+            this.comboBoxPortas.Location = new System.Drawing.Point(108, 17);
+            this.comboBoxPortas.Name = "comboBoxPortas";
+            this.comboBoxPortas.Size = new System.Drawing.Size(69, 23);
+            this.comboBoxPortas.TabIndex = 1;
+            this.comboBoxPortas.SelectedIndexChanged += new System.EventHandler(this.comboBoxPortas_SelectedIndexChanged);
+            // 
+            // portaNotControl
+            // 
+            this.portaNotControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaNotControl.Location = new System.Drawing.Point(15, 57);
+            this.portaNotControl.Name = "portaNotControl";
+            this.portaNotControl.Size = new System.Drawing.Size(774, 352);
+            this.portaNotControl.TabIndex = 0;
+            // 
+            // portaAndControl
+            // 
+            this.portaAndControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaAndControl.Location = new System.Drawing.Point(15, 57);
+            this.portaAndControl.Name = "portaAndControl";
+            this.portaAndControl.Size = new System.Drawing.Size(774, 352);
+            this.portaAndControl.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -358,6 +527,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -392,5 +565,21 @@
         private GroupBox groupBox2;
         private Label label9;
         private ComboBox cBoxReceptor;
+        private GroupBox groupBox4;
+        private GroupBox groupBox3;
+        private TextBox txtTensaoSecundaria;
+        private Label label11;
+        private Label label12;
+        private TextBox txtResistenciaP2;
+        private TabPage tabPage3;
+        private PortaNotControl portaNotControl;
+        private ComboBox comboBoxPortas;
+        private Label label10;
+        private PortaAndControl portaAndControl;
+        private PortaNandControl portaNandControl;
+        private PortaOrControl portaOrControl;
+        private PortaNorControl portaNorControl;
+        private PortaXorControl portaXorControl;
+        private PortaNxorControl portaNxorControl;
     }
 }

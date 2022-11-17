@@ -71,7 +71,6 @@
             this.labelTensaoPico.Name = "labelTensaoPico";
             this.labelTensaoPico.Size = new System.Drawing.Size(63, 23);
             this.labelTensaoPico.TabIndex = 1;
-            this.labelTensaoPico.Text = "10";
             this.labelTensaoPico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelTensaoRipple
@@ -82,7 +81,6 @@
             this.labelTensaoRipple.Name = "labelTensaoRipple";
             this.labelTensaoRipple.Size = new System.Drawing.Size(63, 23);
             this.labelTensaoRipple.TabIndex = 3;
-            this.labelTensaoRipple.Text = "10";
             this.labelTensaoRipple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelTensaoMedia
@@ -93,7 +91,6 @@
             this.labelTensaoMedia.Name = "labelTensaoMedia";
             this.labelTensaoMedia.Size = new System.Drawing.Size(63, 23);
             this.labelTensaoMedia.TabIndex = 5;
-            this.labelTensaoMedia.Text = "10";
             this.labelTensaoMedia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ResultadosP2Form
@@ -113,6 +110,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultados";
+            this.Load += new System.EventHandler(this.ResultadosP2Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

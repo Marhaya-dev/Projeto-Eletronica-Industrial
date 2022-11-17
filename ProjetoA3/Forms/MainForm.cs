@@ -1,5 +1,6 @@
 ﻿using ProjetoA3.Domain.Settings;
 using ProjetoA3.Domain.Utils;
+using System.Windows.Forms;
 
 namespace ProjetoA3.Forms
 {
@@ -13,6 +14,7 @@ namespace ProjetoA3.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadReceptores();
+            LoadPortasLogicas();
         }
 
         private void LoadReceptores()
@@ -26,6 +28,25 @@ namespace ProjetoA3.Forms
             cBoxReceptor.ValueMember = "Key";
             cBoxReceptor.DisplayMember = "Value";
             cBoxReceptor.DataSource = new BindingSource(items, null);
+        }
+
+        private void LoadPortasLogicas()
+        {
+            var items = new List<string>
+            {
+                "NOT",
+                "AND",
+                "NAND",
+                "OR",
+                "NOR",
+                "XOR",
+                "NXOR"
+            };
+
+            comboBoxPortas.DataSource = new BindingSource(items, null);
+
+            portaNotControl.Show();
+            portaNotControl.BringToFront();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -164,28 +185,28 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (!double.TryParse(txtR4.Text, out zero) || zero == 0 )
+            if (!double.TryParse(txtR4.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 4 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR5.Text, out zero) || zero == 0 )
+            if (!double.TryParse(txtR5.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 5 inválida.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtR6.Text, out zero) || zero == 0 )
+            if (!double.TryParse(txtR6.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 6 inválida.");
 
                 return false;
             }
 
-            if(Convert.ToDouble(txtGerador.Text) < Convert.ToDouble(cBoxReceptor.SelectedValue))
+            if (Convert.ToDouble(txtGerador.Text) < Convert.ToDouble(cBoxReceptor.SelectedValue))
             {
                 Alert($"A tensão do gerador não pode ser menor que a tensão do receptor.");
 
@@ -221,13 +242,115 @@ namespace ProjetoA3.Forms
 
         private void btnCalcular2_Click(object sender, EventArgs e)
         {
-            var form = new ResultadosP2Form();
-            form.ShowDialog();
+            if (SaveInput2())
+            {
+                var form = new ResultadosP2Form();
+                form.ShowDialog();
+            }
+        }
+
+        public bool SaveInput2()
+        {
+            if (ValidateInput2())
+            {
+                var input = GetInput2();
+
+                JsonUtils.SaveP2(input);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ValidateInput2()
+        {
+            if (string.IsNullOrWhiteSpace(txtTensaoSecundaria.Text))
+            {
+                Alert($"Por favor, informe a tensão secundária.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaP2.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtTensaoSecundaria.Text, out double zero) || zero == 0)
+            {
+                Alert($"Tensão secundária inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtResistenciaP2.Text, out zero) || zero == 0)
+            {
+                Alert($"Resistência 1 inválida.");
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public DadosP2 GetInput2()
+        {
+            var result = new DadosP2();
+
+            result.TensaoSecundaria = Convert.ToDouble(txtTensaoSecundaria.Text.Replace(".", ","));
+            result.R1 = Convert.ToDouble(txtResistenciaP2.Text.Replace(".", ","));
+
+            return result;
         }
 
         private void btnLimpar2_Click(object sender, EventArgs e)
         {
+            txtTensaoSecundaria.Clear();
+            txtResistenciaP2.Clear();
+        }
 
+        private void comboBoxPortas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxPortas.SelectedValue.ToString())
+            {
+                case "NOT":
+                    portaNotControl.Show();
+                    portaNotControl.BringToFront();
+                    break;
+
+                case "AND":
+                    portaAndControl.Show();
+                    portaAndControl.BringToFront();
+                    break;
+
+                case "NAND":
+                    portaNandControl.Show();
+                    portaNandControl.BringToFront();
+                    break;
+
+                case "OR":
+                    portaOrControl.Show();
+                    portaOrControl.BringToFront();
+                    break;
+
+                case "NOR":
+                    portaNorControl.Show();
+                    portaNorControl.BringToFront();
+                    break;
+
+                case "XOR":
+                    portaXorControl.Show();
+                    portaXorControl.BringToFront();
+                    break;
+
+                case "NXOR":
+                    portaNxorControl.Show();
+                    portaNxorControl.BringToFront();
+                    break;
+            };
         }
     }
 }

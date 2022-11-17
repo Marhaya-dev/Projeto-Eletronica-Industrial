@@ -21,3 +21,10 @@ C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\bin\Debug\net6.0-windows\appsettings.json
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosP2Form.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Properties.Resources.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNotControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaAndControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNandControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNorControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNxorControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaOrControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaXorControl.resources
