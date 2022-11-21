@@ -31,20 +31,25 @@ namespace ProjetoA3.Forms
             var dados = JsonUtils.ReadP2();
             var resultadosP2 = new ResultadosP2();
 
+            //Tensão de pico no secundário
             var v2Pico = dados.TensaoSecundaria * Math.Sqrt(2);
+
+            //Tensão de pico no capacitor
             var vd = 2 * 0.7;
-            var vcPico = (v2Pico - 0.7) / 2; //Verificar essa divisão por 2
+            var vcPico = v2Pico - vd; 
+
             var correnteMedia = vcPico / dados.R1;
-            var c = 100 * Math.Pow(10, -6);
-            var vRippleKelly = correnteMedia / (c * 120);
+
+            //Tensão de Ripple
             var vRipple = vcPico / 10;
-            var vMin = vcPico - vRippleKelly;
+
+            //Tensão média da carga
+            var vMin = vcPico - vRipple;
             var vMediaCarga = (vcPico + vMin) / 2;
-            var vMediaCarga2 = vcPico * 0.636;
 
             resultadosP2.TensaoPicoCapacitor = vcPico;
-            resultadosP2.TensaoRipple = vRippleKelly;
-            resultadosP2.TensaoMediaCarga = vMediaCarga2;
+            resultadosP2.TensaoRipple = vRipple;
+            resultadosP2.TensaoMediaCarga = vMediaCarga;
 
             return resultadosP2;
         }
