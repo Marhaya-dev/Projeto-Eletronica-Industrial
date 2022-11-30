@@ -59,5 +59,10 @@ namespace ProjetoA3.Forms
 
             PortaNand();
         }
+
+        private void PortaNandControl_Load(object sender, EventArgs e)
+        {
+            PortaNand();
+        }
     }
 }

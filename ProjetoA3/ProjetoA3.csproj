@@ -6,11 +6,19 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>eletric.ico</ApplicationIcon>
+    <ApplicationIcon>circuito-eletrico.ico</ApplicationIcon>
+    <PackageIcon>circuito-eletrico.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="eletric.ico" />
+    <Content Include="circuito-eletrico.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Pictures\ProjetoA3\circuito-eletrico.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

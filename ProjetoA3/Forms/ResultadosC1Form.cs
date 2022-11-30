@@ -3,9 +3,9 @@ using ProjetoA3.Domain.Utils;
 
 namespace ProjetoA3.Forms
 {
-    public partial class ResultadosP1Form : Form
+    public partial class ResultadosC1Form : Form
     {
-        public ResultadosP1Form()
+        public ResultadosC1Form()
         {
             InitializeComponent();
         }
@@ -17,10 +17,10 @@ namespace ProjetoA3.Forms
             LoadDtg(resultados);
         }
 
-        private static ResultadosP1 Calcular()
+        private static ResultadosC1 Calcular()
         {
-            var dados = JsonUtils.ReadP1();
-            var resultadosP1 = new ResultadosP1();
+            var dados = JsonUtils.ReadC1();
+            var resultadosP1 = new ResultadosC1();
 
             var multiplicacao = (dados.R1 + dados.R2 + dados.R6 + dados.R5) / dados.R6;
             var corrente3 = (- dados.TensaoGerador + (dados.TensaoReceptor * multiplicacao)) / ( - ((dados.R6 + dados.R3 + dados.R4)*multiplicacao) + dados.R6);
@@ -34,7 +34,7 @@ namespace ProjetoA3.Forms
             resultadosP1.CorrenteR5 = corrente1;
             resultadosP1.CorrenteR6 = corrente2;
 
-            resultadosP1.CorrenteTotal = corrente1 + corrente2 + corrente3;
+            resultadosP1.CorrenteTotal = corrente2;
 
             resultadosP1.PotenciaR1 = dados.R1 * (Math.Pow(corrente1, 2));
             resultadosP1.PotenciaR2 = dados.R2 * (Math.Pow(corrente1, 2));
@@ -43,10 +43,13 @@ namespace ProjetoA3.Forms
             resultadosP1.PotenciaR5 = dados.R5 * (Math.Pow(corrente1, 2));
             resultadosP1.PotenciaR6 = dados.R6 * (Math.Pow(corrente2, 2));
 
+            resultadosP1.PotenciaGerador = dados.TensaoGerador * corrente1;
+            resultadosP1.PotenciaReceptor = dados.TensaoReceptor * Math.Abs(corrente3);
+
             return resultadosP1;
         }
 
-        private void LoadDtg(ResultadosP1 resultados)
+        private void LoadDtg(ResultadosC1 resultados)
         {
             dtgR1.Columns.Add("resistor", "Resistor");
             dtgR1.Columns.Add("corrente", "Corrente (A)");
@@ -61,6 +64,8 @@ namespace ProjetoA3.Forms
 
             dtgR1.ClearSelection();
 
+            labelPotenciaGerador.Text = resultados.PotenciaGerador.ToString("N2");
+            labelPotenciaReceptor.Text = resultados.PotenciaReceptor.ToString("N2");
             labelCorrenteTotal.Text = resultados.CorrenteTotal.ToString("N2");
         }
     }

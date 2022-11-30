@@ -59,5 +59,10 @@ namespace ProjetoA3.Forms
 
             PortaNor();
         }
+
+        private void PortaNorControl_Load(object sender, EventArgs e)
+        {
+            PortaNor();
+        }
     }
 }

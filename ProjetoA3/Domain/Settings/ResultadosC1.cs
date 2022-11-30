@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoA3.Domain.Settings
 {
-    public class ResultadosP1
+    public class ResultadosC1
     {
         public double CorrenteTotal { get; set; }
         public double CorrenteR1 { get; set; }
@@ -22,5 +22,7 @@ namespace ProjetoA3.Domain.Settings
         public double PotenciaR4 { get; set; }
         public double PotenciaR5 { get; set; }
         public double PotenciaR6 { get; set; }
+        public double PotenciaGerador { get; set; }
+        public double PotenciaReceptor { get; set; }
     }
 }

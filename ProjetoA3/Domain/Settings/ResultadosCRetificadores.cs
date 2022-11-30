@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoA3.Domain.Settings
 {
-    public class ResultadosP2
+    public class ResultadosCRetificadores
     {
         public double TensaoPicoCapacitor { get; set; }
         public double TensaoRipple { get; set; }

@@ -65,5 +65,10 @@ namespace ProjetoA3.Forms
 
             PortaXor();
         }
+
+        private void PortaXorControl_Load(object sender, EventArgs e)
+        {
+            PortaXor();
+        }
     }
 }

@@ -22,14 +22,24 @@ namespace ProjetoA3.Forms
             if (labelEntradaNot.Text == "0")
             {
                 labelEntradaNot.Text = "1";
+            }
+            else
+            {
+                labelEntradaNot.Text = "0";
+            }
 
+            PortaNot();
+        }
+
+        private void PortaNot()
+        {
+            if (labelEntradaNot.Text == "0")
+            {
                 pictureLedGrey.Show();
                 pictureLedGrey.BringToFront();
             }
             else
             {
-                labelEntradaNot.Text = "0";
-
                 pictureLedRed.Show();
                 pictureLedRed.BringToFront();
             }
@@ -37,8 +47,7 @@ namespace ProjetoA3.Forms
 
         private void PortaNotControl_Load(object sender, EventArgs e)
         {
-            pictureLedRed.Show();
-            pictureLedRed.BringToFront();
+            PortaNot();
         }
     }
 }

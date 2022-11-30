@@ -59,5 +59,10 @@ namespace ProjetoA3.Forms
 
             PortaOr();
         }
+
+        private void PortaOrControl_Load(object sender, EventArgs e)
+        {
+            PortaOr();
+        }
     }
 }

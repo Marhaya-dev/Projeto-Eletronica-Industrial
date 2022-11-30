@@ -45,9 +45,9 @@
             this.labelEntrada2.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntrada2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntrada2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada2.Location = new System.Drawing.Point(208, 179);
+            this.labelEntrada2.Location = new System.Drawing.Point(227, 197);
             this.labelEntrada2.Name = "labelEntrada2";
-            this.labelEntrada2.Size = new System.Drawing.Size(23, 27);
+            this.labelEntrada2.Size = new System.Drawing.Size(23, 30);
             this.labelEntrada2.TabIndex = 29;
             this.labelEntrada2.Text = "0";
             this.labelEntrada2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -56,7 +56,7 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(498, 108);
+            this.pictureLedGrey.Location = new System.Drawing.Point(515, 128);
             this.pictureLedGrey.Name = "pictureLedGrey";
             this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -66,7 +66,7 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(499, 108);
+            this.pictureLedRed.Location = new System.Drawing.Point(515, 128);
             this.pictureLedRed.Name = "pictureLedRed";
             this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -78,9 +78,9 @@
             this.labelEntrada1.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntrada1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntrada1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada1.Location = new System.Drawing.Point(208, 149);
+            this.labelEntrada1.Location = new System.Drawing.Point(227, 166);
             this.labelEntrada1.Name = "labelEntrada1";
-            this.labelEntrada1.Size = new System.Drawing.Size(23, 27);
+            this.labelEntrada1.Size = new System.Drawing.Size(23, 30);
             this.labelEntrada1.TabIndex = 25;
             this.labelEntrada1.Text = "0";
             this.labelEntrada1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,7 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(230, 137);
+            this.pictureBox1.Location = new System.Drawing.Point(248, 156);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(309, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -100,7 +100,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(334, 10);
+            this.label1.Location = new System.Drawing.Point(334, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 24;
@@ -108,17 +108,19 @@
             // 
             // PortaXorControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelEntrada2);
-            this.Controls.Add(this.pictureLedGrey);
             this.Controls.Add(this.pictureLedRed);
             this.Controls.Add(this.labelEntrada1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureLedGrey);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PortaXorControl";
-            this.Size = new System.Drawing.Size(772, 350);
+            this.Size = new System.Drawing.Size(772, 397);
+            this.Load += new System.EventHandler(this.PortaXorControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGrey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

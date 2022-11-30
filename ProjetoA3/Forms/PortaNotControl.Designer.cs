@@ -44,9 +44,9 @@
             this.labelEntradaNot.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntradaNot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntradaNot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntradaNot.Location = new System.Drawing.Point(196, 162);
+            this.labelEntradaNot.Location = new System.Drawing.Point(196, 181);
             this.labelEntradaNot.Name = "labelEntradaNot";
-            this.labelEntradaNot.Size = new System.Drawing.Size(23, 27);
+            this.labelEntradaNot.Size = new System.Drawing.Size(23, 30);
             this.labelEntradaNot.TabIndex = 3;
             this.labelEntradaNot.Text = "0";
             this.labelEntradaNot.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -55,7 +55,7 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(515, 108);
+            this.pictureLedRed.Location = new System.Drawing.Point(515, 128);
             this.pictureLedRed.Name = "pictureLedRed";
             this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -65,7 +65,7 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(515, 108);
+            this.pictureLedGrey.Location = new System.Drawing.Point(515, 128);
             this.pictureLedGrey.Name = "pictureLedGrey";
             this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -75,7 +75,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(214, 155);
+            this.pictureBox1.Location = new System.Drawing.Point(214, 175);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(342, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -86,7 +86,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(334, 10);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(334, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 21);
             this.label1.TabIndex = 7;
@@ -94,16 +95,17 @@
             // 
             // PortaNotControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pictureLedGrey);
-            this.Controls.Add(this.pictureLedRed);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEntradaNot);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureLedRed);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PortaNotControl";
-            this.Size = new System.Drawing.Size(772, 350);
+            this.Size = new System.Drawing.Size(772, 397);
             this.Load += new System.EventHandler(this.PortaNotControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGrey)).EndInit();

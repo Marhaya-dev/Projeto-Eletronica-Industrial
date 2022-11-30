@@ -65,5 +65,10 @@ namespace ProjetoA3.Forms
 
             PortaNxor();
         }
+
+        private void PortaNxorControl_Load(object sender, EventArgs e)
+        {
+            PortaNxor();
+        }
     }
 }

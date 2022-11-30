@@ -1,6 +1,5 @@
 ﻿using ProjetoA3.Domain.Settings;
 using ProjetoA3.Domain.Utils;
-using System.Windows.Forms;
 
 namespace ProjetoA3.Forms
 {
@@ -49,19 +48,67 @@ namespace ProjetoA3.Forms
             portaNotControl.BringToFront();
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
+        private void comboBoxPortas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (SaveInput())
+            switch (comboBoxPortas.SelectedValue.ToString())
             {
-                var form = new ResultadosP1Form();
+                case "NOT":
+                    portaNotControl.Show();
+                    portaNotControl.BringToFront();
+                    break;
+
+                case "AND":
+                    portaAndControl.Show();
+                    portaAndControl.BringToFront();
+                    break;
+
+                case "NAND":
+                    portaNandControl.Show();
+                    portaNandControl.BringToFront();
+                    break;
+
+                case "OR":
+                    portaOrControl.Show();
+                    portaOrControl.BringToFront();
+                    break;
+
+                case "NOR":
+                    portaNorControl.Show();
+                    portaNorControl.BringToFront();
+                    break;
+
+                case "XOR":
+                    portaXorControl.Show();
+                    portaXorControl.BringToFront();
+                    break;
+
+                case "NXOR":
+                    portaNxorControl.Show();
+                    portaNxorControl.BringToFront();
+                    break;
+            };
+        }
+
+        public static DialogResult Alert(string message)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            string caption = "Aviso";
+            return MessageBox.Show(message, caption, buttons);
+        }
+
+        #region C1
+        private void btnCalcularC1_Click(object sender, EventArgs e)
+        {
+            if (SaveInputC1())
+            {
+                var form = new ResultadosC1Form();
                 form.ShowDialog();
             }
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnLimparC1_Click(object sender, EventArgs e)
         {
             txtGerador.Clear();
-            txtFrequencia.Clear();
             txtR1.Clear();
             txtR2.Clear();
             txtR3.Clear();
@@ -71,13 +118,13 @@ namespace ProjetoA3.Forms
             cBoxReceptor.SelectedItem = null;
         }
 
-        public bool SaveInput()
+        public bool SaveInputC1()
         {
-            if (ValidateInput())
+            if (ValidateInputC1())
             {
-                var input = GetInput();
+                var input = GetInputC1();
 
-                JsonUtils.SaveP1(input);
+                JsonUtils.SaveC1(input);
 
                 return true;
             }
@@ -85,7 +132,7 @@ namespace ProjetoA3.Forms
             return false;
         }
 
-        public bool ValidateInput()
+        public bool ValidateInputC1()
         {
             if (cBoxReceptor.SelectedValue == null)
             {
@@ -97,13 +144,6 @@ namespace ProjetoA3.Forms
             if (string.IsNullOrWhiteSpace(txtGerador.Text))
             {
                 Alert($"Por favor, informe a tensão do gerador.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtFrequencia.Text))
-            {
-                Alert($"Por favor, informe a frequência do gerador.");
 
                 return false;
             }
@@ -153,13 +193,6 @@ namespace ProjetoA3.Forms
             if (!double.TryParse(txtGerador.Text, out double zero) || zero == 0)
             {
                 Alert($"Tensão do gerador inválida.");
-
-                return false;
-            }
-
-            if (!double.TryParse(txtFrequencia.Text, out zero) || zero == 0)
-            {
-                Alert($"Frequência do gerador inválida.");
 
                 return false;
             }
@@ -216,12 +249,11 @@ namespace ProjetoA3.Forms
             return true;
         }
 
-        public DadosP1 GetInput()
+        public DadosC1 GetInputC1()
         {
-            var result = new DadosP1();
+            var result = new DadosC1();
 
             result.TensaoGerador = Convert.ToDouble(txtGerador.Text.Replace(".", ","));
-            result.Frequencia = Convert.ToDouble(txtFrequencia.Text.Replace(".", ","));
             result.R1 = Convert.ToDouble(txtR1.Text.Replace(".", ","));
             result.R2 = Convert.ToDouble(txtR2.Text.Replace(".", ","));
             result.R3 = Convert.ToDouble(txtR3.Text.Replace(".", ","));
@@ -233,29 +265,34 @@ namespace ProjetoA3.Forms
             return result;
         }
 
-        public static DialogResult Alert(string message)
-        {
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            string caption = "Aviso";
-            return MessageBox.Show(message, caption, buttons);
-        }
+        #endregion
 
-        private void btnCalcular2_Click(object sender, EventArgs e)
+        #region C2
+        private void btnCalcularC2_Click(object sender, EventArgs e)
         {
-            if (SaveInput2())
+            if (SaveInputC2())
             {
-                var form = new ResultadosP2Form();
+                var form = new ResultadosC2Form();
                 form.ShowDialog();
             }
         }
 
-        public bool SaveInput2()
+        private void btnLimparC2_Click(object sender, EventArgs e)
         {
-            if (ValidateInput2())
-            {
-                var input = GetInput2();
+            txtTensaoC2.Clear();
+            txtResistenciaC2.Clear();
+            txtN1C2.Clear();
+            txtN2C2.Clear();
+            txtCapacitorC2.Clear();
+        }
 
-                JsonUtils.SaveP2(input);
+        public bool SaveInputC2()
+        {
+            if (ValidateInputC2())
+            {
+                var input = GetInputC2();
+
+                JsonUtils.Save(input, "DadosC2");
 
                 return true;
             }
@@ -263,32 +300,74 @@ namespace ProjetoA3.Forms
             return false;
         }
 
-        public bool ValidateInput2()
+        public bool ValidateInputC2()
         {
-            if (string.IsNullOrWhiteSpace(txtTensaoSecundaria.Text))
+            if (string.IsNullOrWhiteSpace(txtTensaoC2.Text))
             {
-                Alert($"Por favor, informe a tensão secundária.");
+                Alert($"Por favor, informe a tensão primária.");
 
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtResistenciaP2.Text))
+            if (string.IsNullOrWhiteSpace(txtResistenciaC2.Text))
             {
                 Alert($"Por favor, informe o valor da Resistência 1.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtTensaoSecundaria.Text, out double zero) || zero == 0)
+            if (string.IsNullOrWhiteSpace(txtN1C2.Text))
             {
-                Alert($"Tensão secundária inválida.");
+                Alert($"Por favor, informe o valor de N1.");
 
                 return false;
             }
 
-            if (!double.TryParse(txtResistenciaP2.Text, out zero) || zero == 0)
+            if (string.IsNullOrWhiteSpace(txtN2C2.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC2.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtTensaoC2.Text, out double zero) || zero == 0)
+            {
+                Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtResistenciaC2.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN1C2.Text, out zero) || zero == 0)
+            {
+                Alert($"N1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN2C2.Text, out zero) || zero == 0)
+            {
+                Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtCapacitorC2.Text, out zero) || zero == 0)
+            {
+                Alert($"Capacitor inválido.");
 
                 return false;
             }
@@ -296,61 +375,267 @@ namespace ProjetoA3.Forms
             return true;
         }
 
-        public DadosP2 GetInput2()
+        public DadosCRetificadores GetInputC2()
         {
-            var result = new DadosP2();
+            var result = new DadosCRetificadores();
 
-            result.TensaoSecundaria = Convert.ToDouble(txtTensaoSecundaria.Text.Replace(".", ","));
-            result.R1 = Convert.ToDouble(txtResistenciaP2.Text.Replace(".", ","));
+            result.TensaoPrimaria = Convert.ToDouble(txtTensaoC2.Text.Replace(".", ","));
+            result.R1 = Convert.ToDouble(txtResistenciaC2.Text.Replace(".", ","));
+            result.N1 = Convert.ToDouble(txtN1C2.Text.Replace(".", ","));
+            result.N2 = Convert.ToDouble(txtN2C2.Text.Replace(".", ","));
+            result.Capacitor = Convert.ToDouble(txtCapacitorC2.Text.Replace(".", ","));
 
             return result;
         }
 
-        private void btnLimpar2_Click(object sender, EventArgs e)
-        {
-            txtTensaoSecundaria.Clear();
-            txtResistenciaP2.Clear();
-        }
+        #endregion
 
-        private void comboBoxPortas_SelectedIndexChanged(object sender, EventArgs e)
+        #region C3
+
+        private void btnCalcularC3_Click(object sender, EventArgs e)
         {
-            switch (comboBoxPortas.SelectedValue.ToString())
+            if (SaveInputC3())
             {
-                case "NOT":
-                    portaNotControl.Show();
-                    portaNotControl.BringToFront();
-                    break;
-
-                case "AND":
-                    portaAndControl.Show();
-                    portaAndControl.BringToFront();
-                    break;
-
-                case "NAND":
-                    portaNandControl.Show();
-                    portaNandControl.BringToFront();
-                    break;
-
-                case "OR":
-                    portaOrControl.Show();
-                    portaOrControl.BringToFront();
-                    break;
-
-                case "NOR":
-                    portaNorControl.Show();
-                    portaNorControl.BringToFront();
-                    break;
-
-                case "XOR":
-                    portaXorControl.Show();
-                    portaXorControl.BringToFront();
-                    break;
-
-                case "NXOR":
-                    portaNxorControl.Show();
-                    portaNxorControl.BringToFront();
-                    break;
-            };
+                var form = new ResultadosC3Form();
+                form.ShowDialog();
+            }
         }
+
+        private void btnLimparC3_Click(object sender, EventArgs e)
+        {
+            txtTensaoC3.Clear();
+            txtResistenciaC3.Clear();
+            txtN1C3.Clear();
+            txtN2C3.Clear();
+            txtCapacitorC3.Clear();
+        }
+
+        public bool SaveInputC3()
+        {
+            if (ValidateInputC3())
+            {
+                var input = GetInputC3();
+
+                JsonUtils.Save(input, "DadosC3");
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ValidateInputC3()
+        {
+            if (string.IsNullOrWhiteSpace(txtTensaoC3.Text))
+            {
+                Alert($"Por favor, informe a tensão primária.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaC3.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtN1C3.Text))
+            {
+                Alert($"Por favor, informe o valor de N1.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtN2C3.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC3.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtTensaoC3.Text, out double zero) || zero == 0)
+            {
+                Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtResistenciaC3.Text, out zero) || zero == 0)
+            {
+                Alert($"Resistência 1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN1C3.Text, out zero) || zero == 0)
+            {
+                Alert($"N1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN2C3.Text, out zero) || zero == 0)
+            {
+                Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtCapacitorC3.Text, out zero) || zero == 0)
+            {
+                Alert($"Capacitor inválido.");
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public DadosCRetificadores GetInputC3()
+        {
+            var result = new DadosCRetificadores();
+
+            result.TensaoPrimaria = Convert.ToDouble(txtTensaoC3.Text.Replace(".", ","));
+            result.R1 = Convert.ToDouble(txtResistenciaC3.Text.Replace(".", ","));
+            result.N1 = Convert.ToDouble(txtN1C3.Text.Replace(".", ","));
+            result.N2 = Convert.ToDouble(txtN2C3.Text.Replace(".", ","));
+            result.Capacitor = Convert.ToDouble(txtCapacitorC3.Text.Replace(".", ","));
+
+            return result;
+        }
+
+        #endregion
+
+        #region C4
+
+        private void btnCalcularC4_Click(object sender, EventArgs e)
+        {
+            if (SaveInputC4())
+            {
+                var form = new ResultadosC4Form();
+                form.ShowDialog();
+            }
+        }
+
+        private void btnLimparC4_Click(object sender, EventArgs e)
+        {
+            txtTensaoC4.Clear();
+            txtResistenciaC4.Clear();
+            txtN1C4.Clear();
+            txtN2C4.Clear();
+            txtCapacitorC4.Clear();
+        }
+
+        public bool SaveInputC4()
+        {
+            if (ValidateInputC4())
+            {
+                var input = GetInputC4();
+
+                JsonUtils.Save(input, "DadosC4");
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ValidateInputC4()
+        {
+            if (string.IsNullOrWhiteSpace(txtTensaoC4.Text))
+            {
+                Alert($"Por favor, informe a tensão primária.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaC4.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtN1C4.Text))
+            {
+                Alert($"Por favor, informe o valor de N1.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtN2C4.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC4.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtTensaoC4.Text, out double zero) || zero == 0)
+            {
+                Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtResistenciaC4.Text, out zero) || zero == 0)
+            {
+                Alert($"Resistência 1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN1C4.Text, out zero) || zero == 0)
+            {
+                Alert($"N1 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtN2C4.Text, out zero) || zero == 0)
+            {
+                Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (!double.TryParse(txtCapacitorC4.Text, out zero) || zero == 0)
+            {
+                Alert($"Capacitor inválido.");
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public DadosCRetificadores GetInputC4()
+        {
+            var result = new DadosCRetificadores();
+
+            result.TensaoPrimaria = Convert.ToDouble(txtTensaoC4.Text.Replace(".", ","));
+            result.R1 = Convert.ToDouble(txtResistenciaC4.Text.Replace(".", ","));
+            result.N1 = Convert.ToDouble(txtN1C4.Text.Replace(".", ","));
+            result.N2 = Convert.ToDouble(txtN2C4.Text.Replace(".", ","));
+            result.Capacitor = Convert.ToDouble(txtCapacitorC4.Text.Replace(".", ","));
+
+            return result;
+        }
+
+        #endregion
     }
 }

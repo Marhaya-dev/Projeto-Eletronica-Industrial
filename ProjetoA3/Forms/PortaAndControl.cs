@@ -31,6 +31,20 @@ namespace ProjetoA3.Forms
             PortaAnd();
         }
 
+        private void labelEntrada2_Click(object sender, EventArgs e)
+        {
+            if (labelEntrada2.Text == "0")
+            {
+                labelEntrada2.Text = "1";
+            }
+            else
+            {
+                labelEntrada2.Text = "0";
+            }
+
+            PortaAnd();
+        }
+
         private void PortaAnd()
         {
             if (labelEntrada1.Text == "1" && labelEntrada2.Text == "1")
@@ -46,17 +60,8 @@ namespace ProjetoA3.Forms
             }
         }
 
-        private void labelEntrada2_Click(object sender, EventArgs e)
+        private void PortaAndControl_Load(object sender, EventArgs e)
         {
-            if (labelEntrada2.Text == "0")
-            {
-                labelEntrada2.Text = "1";
-            }
-            else
-            {
-                labelEntrada2.Text = "0";
-            }
-
             PortaAnd();
         }
     }

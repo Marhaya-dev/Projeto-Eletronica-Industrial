@@ -15,11 +15,9 @@ C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.genruntimeconfig.cache
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ref\ProjetoA3.dll
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.MainForm.resources
-C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosP1Form.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.csproj.CopyComplete
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\bin\Debug\net6.0-windows\appsettings.json
-C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosP2Form.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Properties.Resources.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNotControl.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaAndControl.resources
@@ -28,3 +26,7 @@ C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaNxorControl.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaOrControl.resources
 C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.PortaXorControl.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosC1Form.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosC2Form.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosC3Form.resources
+C:\Users\ADV\source\repos\ProjetoA3\ProjetoA3\obj\Debug\net6.0-windows\ProjetoA3.Forms.ResultadosC4Form.resources
