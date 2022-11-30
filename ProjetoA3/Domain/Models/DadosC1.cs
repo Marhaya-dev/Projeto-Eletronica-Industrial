@@ -1,4 +1,4 @@
-﻿namespace ProjetoA3.Domain.Settings
+﻿namespace ProjetoA3.Domain.Models
 {
     public class DadosC1
     {

@@ -1,4 +1,4 @@
-﻿using ProjetoA3.Domain.Settings;
+﻿using ProjetoA3.Domain.Models;
 using ProjetoA3.Domain.Utils;
 
 namespace ProjetoA3.Forms
@@ -148,51 +148,16 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtR1.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtR2.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 2.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtR3.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 3.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtR4.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 4.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtR5.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 5.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtR6.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 6.");
-
-                return false;
-            }
-
             if (!double.TryParse(txtGerador.Text, out double zero) || zero == 0)
             {
                 Alert($"Tensão do gerador inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtR1.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
 
                 return false;
             }
@@ -204,9 +169,23 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtR2.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 2.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtR2.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 2 inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtR3.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 3.");
 
                 return false;
             }
@@ -218,6 +197,13 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtR4.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 4.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtR4.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 4 inválida.");
@@ -225,9 +211,23 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtR5.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 5.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtR5.Text, out zero) || zero == 0)
             {
                 Alert($"Resistência 5 inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtR6.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 6.");
 
                 return false;
             }
@@ -309,37 +309,16 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtResistenciaC2.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN1C2.Text))
-            {
-                Alert($"Por favor, informe o valor de N1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN2C2.Text))
-            {
-                Alert($"Por favor, informe o valor de N2.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtCapacitorC2.Text))
-            {
-                Alert($"Por favor, informe o valor do Capacitor.");
-
-                return false;
-            }
-
             if (!double.TryParse(txtTensaoC2.Text, out double zero) || zero == 0)
             {
                 Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaC2.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
 
                 return false;
             }
@@ -351,6 +330,13 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN1C2.Text))
+            {
+                Alert($"Por favor, informe o valor de N1.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN1C2.Text, out zero) || zero == 0)
             {
                 Alert($"N1 inválida.");
@@ -358,9 +344,23 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN2C2.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN2C2.Text, out zero) || zero == 0)
             {
                 Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC2.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
 
                 return false;
             }
@@ -433,37 +433,16 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtResistenciaC3.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN1C3.Text))
-            {
-                Alert($"Por favor, informe o valor de N1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN2C3.Text))
-            {
-                Alert($"Por favor, informe o valor de N2.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtCapacitorC3.Text))
-            {
-                Alert($"Por favor, informe o valor do Capacitor.");
-
-                return false;
-            }
-
             if (!double.TryParse(txtTensaoC3.Text, out double zero) || zero == 0)
             {
                 Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaC3.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
 
                 return false;
             }
@@ -475,6 +454,13 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN1C3.Text))
+            {
+                Alert($"Por favor, informe o valor de N1.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN1C3.Text, out zero) || zero == 0)
             {
                 Alert($"N1 inválida.");
@@ -482,9 +468,23 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN2C3.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN2C3.Text, out zero) || zero == 0)
             {
                 Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC3.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
 
                 return false;
             }
@@ -557,37 +557,16 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtResistenciaC4.Text))
-            {
-                Alert($"Por favor, informe o valor da Resistência 1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN1C4.Text))
-            {
-                Alert($"Por favor, informe o valor de N1.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtN2C4.Text))
-            {
-                Alert($"Por favor, informe o valor de N2.");
-
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtCapacitorC4.Text))
-            {
-                Alert($"Por favor, informe o valor do Capacitor.");
-
-                return false;
-            }
-
             if (!double.TryParse(txtTensaoC4.Text, out double zero) || zero == 0)
             {
                 Alert($"Tensão primária inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtResistenciaC4.Text))
+            {
+                Alert($"Por favor, informe o valor da Resistência 1.");
 
                 return false;
             }
@@ -599,6 +578,13 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN1C4.Text))
+            {
+                Alert($"Por favor, informe o valor de N1.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN1C4.Text, out zero) || zero == 0)
             {
                 Alert($"N1 inválida.");
@@ -606,9 +592,23 @@ namespace ProjetoA3.Forms
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(txtN2C4.Text))
+            {
+                Alert($"Por favor, informe o valor de N2.");
+
+                return false;
+            }
+
             if (!double.TryParse(txtN2C4.Text, out zero) || zero == 0)
             {
                 Alert($"N2 inválida.");
+
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCapacitorC4.Text))
+            {
+                Alert($"Por favor, informe o valor do Capacitor.");
 
                 return false;
             }

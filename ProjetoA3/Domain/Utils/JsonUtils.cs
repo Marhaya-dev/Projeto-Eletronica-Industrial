@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ProjetoA3.Domain.Settings;
+using ProjetoA3.Domain.Models;
 using System.IO;
 using System.Windows.Forms.Design;
 

@@ -1,4 +1,4 @@
-﻿using ProjetoA3.Domain.Settings;
+﻿using ProjetoA3.Domain.Models;
 using ProjetoA3.Domain.Utils;
 using System;
 using System.Collections.Generic;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoA3.Domain.Settings
+namespace ProjetoA3.Domain.Models
 {
     public class ResultadosC1
     {
