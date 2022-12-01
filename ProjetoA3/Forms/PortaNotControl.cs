@@ -35,13 +35,13 @@ namespace ProjetoA3.Forms
         {
             if (labelEntradaNot.Text == "0")
             {
-                pictureLedGrey.Show();
-                pictureLedGrey.BringToFront();
+                pictureLedRed.Show();
+                pictureLedRed.BringToFront();
             }
             else
             {
-                pictureLedRed.Show();
-                pictureLedRed.BringToFront();
+                pictureLedGrey.Show();
+                pictureLedGrey.BringToFront();
             }
         }
 

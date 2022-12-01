@@ -103,13 +103,13 @@
             this.simulacao = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxPortas = new System.Windows.Forms.ComboBox();
+            this.portaAndControl = new ProjetoA3.Forms.PortaAndControl();
             this.portaNotControl = new ProjetoA3.Forms.PortaNotControl();
             this.portaXorControl = new ProjetoA3.Forms.PortaXorControl();
             this.portaOrControl = new ProjetoA3.Forms.PortaOrControl();
             this.portaNxorControl = new ProjetoA3.Forms.PortaNxorControl();
             this.portaNorControl = new ProjetoA3.Forms.PortaNorControl();
             this.portaNandControl = new ProjetoA3.Forms.PortaNandControl();
-            this.portaAndControl = new ProjetoA3.Forms.PortaAndControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPages.SuspendLayout();
             this.c1.SuspendLayout();
@@ -889,13 +889,13 @@
             // 
             this.simulacao.Controls.Add(this.label10);
             this.simulacao.Controls.Add(this.comboBoxPortas);
+            this.simulacao.Controls.Add(this.portaAndControl);
             this.simulacao.Controls.Add(this.portaNotControl);
             this.simulacao.Controls.Add(this.portaXorControl);
             this.simulacao.Controls.Add(this.portaOrControl);
             this.simulacao.Controls.Add(this.portaNxorControl);
             this.simulacao.Controls.Add(this.portaNorControl);
             this.simulacao.Controls.Add(this.portaNandControl);
-            this.simulacao.Controls.Add(this.portaAndControl);
             this.simulacao.Location = new System.Drawing.Point(4, 29);
             this.simulacao.Name = "simulacao";
             this.simulacao.Size = new System.Drawing.Size(804, 442);
@@ -906,7 +906,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 28);
+            this.label10.Location = new System.Drawing.Point(18, 21);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 17);
             this.label10.TabIndex = 2;
@@ -918,20 +918,29 @@
             this.comboBoxPortas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPortas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxPortas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.comboBoxPortas.Location = new System.Drawing.Point(114, 25);
+            this.comboBoxPortas.Location = new System.Drawing.Point(116, 18);
             this.comboBoxPortas.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.comboBoxPortas.Name = "comboBoxPortas";
             this.comboBoxPortas.Size = new System.Drawing.Size(69, 25);
             this.comboBoxPortas.TabIndex = 1;
             this.comboBoxPortas.SelectedIndexChanged += new System.EventHandler(this.comboBoxPortas_SelectedIndexChanged);
             // 
+            // portaAndControl
+            // 
+            this.portaAndControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.portaAndControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.portaAndControl.Location = new System.Drawing.Point(19, 59);
+            this.portaAndControl.Name = "portaAndControl";
+            this.portaAndControl.Size = new System.Drawing.Size(766, 365);
+            this.portaAndControl.TabIndex = 4;
+            // 
             // portaNotControl
             // 
             this.portaNotControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaNotControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaNotControl.Location = new System.Drawing.Point(16, 65);
+            this.portaNotControl.Location = new System.Drawing.Point(19, 59);
             this.portaNotControl.Name = "portaNotControl";
-            this.portaNotControl.Size = new System.Drawing.Size(772, 359);
+            this.portaNotControl.Size = new System.Drawing.Size(766, 365);
             this.portaNotControl.TabIndex = 3;
             // 
             // portaXorControl
@@ -939,55 +948,46 @@
             this.portaXorControl.BackColor = System.Drawing.Color.Transparent;
             this.portaXorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaXorControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaXorControl.Location = new System.Drawing.Point(16, 65);
+            this.portaXorControl.Location = new System.Drawing.Point(19, 59);
             this.portaXorControl.Name = "portaXorControl";
-            this.portaXorControl.Size = new System.Drawing.Size(772, 359);
+            this.portaXorControl.Size = new System.Drawing.Size(766, 365);
             this.portaXorControl.TabIndex = 9;
             // 
             // portaOrControl
             // 
             this.portaOrControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaOrControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaOrControl.Location = new System.Drawing.Point(16, 65);
+            this.portaOrControl.Location = new System.Drawing.Point(19, 59);
             this.portaOrControl.Name = "portaOrControl";
-            this.portaOrControl.Size = new System.Drawing.Size(772, 359);
+            this.portaOrControl.Size = new System.Drawing.Size(766, 365);
             this.portaOrControl.TabIndex = 8;
             // 
             // portaNxorControl
             // 
             this.portaNxorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaNxorControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaNxorControl.Location = new System.Drawing.Point(16, 65);
+            this.portaNxorControl.Location = new System.Drawing.Point(19, 59);
             this.portaNxorControl.Name = "portaNxorControl";
-            this.portaNxorControl.Size = new System.Drawing.Size(772, 359);
+            this.portaNxorControl.Size = new System.Drawing.Size(766, 365);
             this.portaNxorControl.TabIndex = 7;
             // 
             // portaNorControl
             // 
             this.portaNorControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaNorControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaNorControl.Location = new System.Drawing.Point(16, 65);
+            this.portaNorControl.Location = new System.Drawing.Point(19, 59);
             this.portaNorControl.Name = "portaNorControl";
-            this.portaNorControl.Size = new System.Drawing.Size(772, 359);
+            this.portaNorControl.Size = new System.Drawing.Size(766, 365);
             this.portaNorControl.TabIndex = 6;
             // 
             // portaNandControl
             // 
             this.portaNandControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portaNandControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaNandControl.Location = new System.Drawing.Point(16, 65);
+            this.portaNandControl.Location = new System.Drawing.Point(19, 59);
             this.portaNandControl.Name = "portaNandControl";
-            this.portaNandControl.Size = new System.Drawing.Size(772, 359);
+            this.portaNandControl.Size = new System.Drawing.Size(766, 365);
             this.portaNandControl.TabIndex = 5;
-            // 
-            // portaAndControl
-            // 
-            this.portaAndControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.portaAndControl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.portaAndControl.Location = new System.Drawing.Point(16, 65);
-            this.portaAndControl.Name = "portaAndControl";
-            this.portaAndControl.Size = new System.Drawing.Size(772, 359);
-            this.portaAndControl.TabIndex = 4;
             // 
             // pictureBox2
             // 
