@@ -53,7 +53,7 @@
             this.labelEntrada2.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntrada2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntrada2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada2.Location = new System.Drawing.Point(114, 197);
+            this.labelEntrada2.Location = new System.Drawing.Point(94, 185);
             this.labelEntrada2.Name = "labelEntrada2";
             this.labelEntrada2.Size = new System.Drawing.Size(23, 30);
             this.labelEntrada2.TabIndex = 29;
@@ -64,7 +64,7 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(402, 129);
+            this.pictureLedGrey.Location = new System.Drawing.Point(408, 120);
             this.pictureLedGrey.Name = "pictureLedGrey";
             this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -74,7 +74,7 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(402, 129);
+            this.pictureLedRed.Location = new System.Drawing.Point(408, 120);
             this.pictureLedRed.Name = "pictureLedRed";
             this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -86,7 +86,7 @@
             this.labelEntrada1.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntrada1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntrada1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada1.Location = new System.Drawing.Point(114, 166);
+            this.labelEntrada1.Location = new System.Drawing.Point(94, 154);
             this.labelEntrada1.Name = "labelEntrada1";
             this.labelEntrada1.Size = new System.Drawing.Size(23, 30);
             this.labelEntrada1.TabIndex = 25;
@@ -97,9 +97,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(135, 156);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 149);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(309, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(338, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -117,7 +117,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(501, -1);
+            this.pictureBox2.Location = new System.Drawing.Point(507, -1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(169, 367);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

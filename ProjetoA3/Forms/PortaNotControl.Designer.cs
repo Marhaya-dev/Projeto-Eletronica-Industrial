@@ -52,7 +52,7 @@
             this.labelEntradaNot.BackColor = System.Drawing.SystemColors.Window;
             this.labelEntradaNot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelEntradaNot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntradaNot.Location = new System.Drawing.Point(82, 192);
+            this.labelEntradaNot.Location = new System.Drawing.Point(94, 170);
             this.labelEntradaNot.Name = "labelEntradaNot";
             this.labelEntradaNot.Size = new System.Drawing.Size(23, 30);
             this.labelEntradaNot.TabIndex = 3;
@@ -63,7 +63,7 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(402, 139);
+            this.pictureLedRed.Location = new System.Drawing.Point(408, 120);
             this.pictureLedRed.Name = "pictureLedRed";
             this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -73,7 +73,7 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(402, 139);
+            this.pictureLedGrey.Location = new System.Drawing.Point(408, 120);
             this.pictureLedGrey.Name = "pictureLedGrey";
             this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -83,9 +83,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(100, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(337, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -104,7 +104,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(501, -1);
+            this.pictureBox3.Location = new System.Drawing.Point(507, -1);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(169, 367);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
