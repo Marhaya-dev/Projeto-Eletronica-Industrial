@@ -51,9 +51,9 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedGrey.Location = new System.Drawing.Point(421, 121);
             this.pictureLedGrey.Name = "pictureLedGrey";
-            this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedGrey.Size = new System.Drawing.Size(38, 61);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedGrey.TabIndex = 10;
             this.pictureLedGrey.TabStop = false;
@@ -61,9 +61,9 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedRed.Location = new System.Drawing.Point(420, 122);
             this.pictureLedRed.Name = "pictureLedRed";
-            this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedRed.Size = new System.Drawing.Size(40, 60);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedRed.TabIndex = 9;
             this.pictureLedRed.TabStop = false;
@@ -94,9 +94,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(114, 148);
+            this.pictureBox1.Location = new System.Drawing.Point(114, 133);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -184,14 +184,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pictureLedGrey);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelEntrada2);
-            this.Controls.Add(this.pictureLedRed);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEntrada1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureLedGrey);
+            this.Controls.Add(this.pictureLedRed);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PortaAndControl";
             this.Size = new System.Drawing.Size(766, 365);

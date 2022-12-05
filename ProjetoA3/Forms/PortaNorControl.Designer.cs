@@ -74,9 +74,9 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedGrey.Location = new System.Drawing.Point(421, 121);
             this.pictureLedGrey.Name = "pictureLedGrey";
-            this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedGrey.Size = new System.Drawing.Size(38, 61);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedGrey.TabIndex = 21;
             this.pictureLedGrey.TabStop = false;
@@ -84,9 +84,9 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedRed.Location = new System.Drawing.Point(420, 122);
             this.pictureLedRed.Name = "pictureLedRed";
-            this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedRed.Size = new System.Drawing.Size(40, 60);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedRed.TabIndex = 20;
             this.pictureLedRed.TabStop = false;
@@ -108,9 +108,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 142);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(338, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;

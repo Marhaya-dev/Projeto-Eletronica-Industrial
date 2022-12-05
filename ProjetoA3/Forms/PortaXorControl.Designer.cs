@@ -64,9 +64,9 @@
             // pictureLedGrey
             // 
             this.pictureLedGrey.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGrey.Image")));
-            this.pictureLedGrey.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedGrey.Location = new System.Drawing.Point(421, 121);
             this.pictureLedGrey.Name = "pictureLedGrey";
-            this.pictureLedGrey.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedGrey.Size = new System.Drawing.Size(38, 61);
             this.pictureLedGrey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedGrey.TabIndex = 27;
             this.pictureLedGrey.TabStop = false;
@@ -74,9 +74,9 @@
             // pictureLedRed
             // 
             this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(408, 120);
+            this.pictureLedRed.Location = new System.Drawing.Point(420, 122);
             this.pictureLedRed.Name = "pictureLedRed";
-            this.pictureLedRed.Size = new System.Drawing.Size(64, 62);
+            this.pictureLedRed.Size = new System.Drawing.Size(40, 60);
             this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureLedRed.TabIndex = 26;
             this.pictureLedRed.TabStop = false;
@@ -97,9 +97,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 144);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(338, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
