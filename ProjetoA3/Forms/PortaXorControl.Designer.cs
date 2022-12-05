@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortaXorControl));
-            this.labelEntrada2 = new System.Windows.Forms.Label();
+            this.labelEntradaB = new System.Windows.Forms.Label();
             this.pictureLedGrey = new System.Windows.Forms.PictureBox();
-            this.pictureLedRed = new System.Windows.Forms.PictureBox();
-            this.labelEntrada1 = new System.Windows.Forms.Label();
+            this.pictureLedGreen = new System.Windows.Forms.PictureBox();
+            this.labelEntradaA = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,24 +42,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGrey)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLedRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLedGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelEntrada2
+            // labelEntradaB
             // 
-            this.labelEntrada2.BackColor = System.Drawing.SystemColors.Window;
-            this.labelEntrada2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelEntrada2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada2.Location = new System.Drawing.Point(94, 185);
-            this.labelEntrada2.Name = "labelEntrada2";
-            this.labelEntrada2.Size = new System.Drawing.Size(23, 30);
-            this.labelEntrada2.TabIndex = 29;
-            this.labelEntrada2.Text = "0";
-            this.labelEntrada2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelEntrada2.Click += new System.EventHandler(this.labelEntrada2_Click);
+            this.labelEntradaB.BackColor = System.Drawing.SystemColors.Window;
+            this.labelEntradaB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelEntradaB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEntradaB.Location = new System.Drawing.Point(94, 185);
+            this.labelEntradaB.Name = "labelEntradaB";
+            this.labelEntradaB.Size = new System.Drawing.Size(23, 30);
+            this.labelEntradaB.TabIndex = 29;
+            this.labelEntradaB.Text = "0";
+            this.labelEntradaB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelEntradaB.Click += new System.EventHandler(this.labelEntradaB_Click);
             // 
             // pictureLedGrey
             // 
@@ -71,28 +71,28 @@
             this.pictureLedGrey.TabIndex = 27;
             this.pictureLedGrey.TabStop = false;
             // 
-            // pictureLedRed
+            // pictureLedGreen
             // 
-            this.pictureLedRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedRed.Image")));
-            this.pictureLedRed.Location = new System.Drawing.Point(420, 122);
-            this.pictureLedRed.Name = "pictureLedRed";
-            this.pictureLedRed.Size = new System.Drawing.Size(40, 60);
-            this.pictureLedRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureLedRed.TabIndex = 26;
-            this.pictureLedRed.TabStop = false;
+            this.pictureLedGreen.Image = ((System.Drawing.Image)(resources.GetObject("pictureLedGreen.Image")));
+            this.pictureLedGreen.Location = new System.Drawing.Point(420, 122);
+            this.pictureLedGreen.Name = "pictureLedGreen";
+            this.pictureLedGreen.Size = new System.Drawing.Size(40, 60);
+            this.pictureLedGreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureLedGreen.TabIndex = 26;
+            this.pictureLedGreen.TabStop = false;
             // 
-            // labelEntrada1
+            // labelEntradaA
             // 
-            this.labelEntrada1.BackColor = System.Drawing.SystemColors.Window;
-            this.labelEntrada1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelEntrada1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEntrada1.Location = new System.Drawing.Point(94, 154);
-            this.labelEntrada1.Name = "labelEntrada1";
-            this.labelEntrada1.Size = new System.Drawing.Size(23, 30);
-            this.labelEntrada1.TabIndex = 25;
-            this.labelEntrada1.Text = "0";
-            this.labelEntrada1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelEntrada1.Click += new System.EventHandler(this.labelEntrada1_Click);
+            this.labelEntradaA.BackColor = System.Drawing.SystemColors.Window;
+            this.labelEntradaA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelEntradaA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEntradaA.Location = new System.Drawing.Point(94, 154);
+            this.labelEntradaA.Name = "labelEntradaA";
+            this.labelEntradaA.Size = new System.Drawing.Size(23, 30);
+            this.labelEntradaA.TabIndex = 25;
+            this.labelEntradaA.Text = "0";
+            this.labelEntradaA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelEntradaA.Click += new System.EventHandler(this.labelEntradaA_Click);
             // 
             // pictureBox1
             // 
@@ -186,9 +186,9 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.labelEntrada2);
-            this.Controls.Add(this.pictureLedRed);
-            this.Controls.Add(this.labelEntrada1);
+            this.Controls.Add(this.labelEntradaB);
+            this.Controls.Add(this.pictureLedGreen);
+            this.Controls.Add(this.labelEntradaA);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureLedGrey);
@@ -197,7 +197,7 @@
             this.Size = new System.Drawing.Size(766, 365);
             this.Load += new System.EventHandler(this.PortaXorControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGrey)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLedRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLedGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -209,10 +209,10 @@
 
         #endregion
 
-        private Label labelEntrada2;
+        private Label labelEntradaB;
         private PictureBox pictureLedGrey;
-        private PictureBox pictureLedRed;
-        private Label labelEntrada1;
+        private PictureBox pictureLedGreen;
+        private Label labelEntradaA;
         private PictureBox pictureBox1;
         private Label label1;
         private PictureBox pictureBox2;

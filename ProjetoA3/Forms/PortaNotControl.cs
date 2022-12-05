@@ -17,15 +17,15 @@ namespace ProjetoA3.Forms
             InitializeComponent();
         }
 
-        private void labelEntradaNot_Click(object sender, EventArgs e)
+        private void labelEntradaA_Click(object sender, EventArgs e)
         {
-            if (labelEntradaNot.Text == "0")
+            if (labelEntradaA.Text == "0")
             {
-                labelEntradaNot.Text = "1";
+                labelEntradaA.Text = "1";
             }
             else
             {
-                labelEntradaNot.Text = "0";
+                labelEntradaA.Text = "0";
             }
 
             PortaNot();
@@ -33,10 +33,10 @@ namespace ProjetoA3.Forms
 
         private void PortaNot()
         {
-            if (labelEntradaNot.Text == "0")
+            if (labelEntradaA.Text == "0")
             {
-                pictureLedRed.Show();
-                pictureLedRed.BringToFront();
+                pictureLedGreen.Show();
+                pictureLedGreen.BringToFront();
             }
             else
             {

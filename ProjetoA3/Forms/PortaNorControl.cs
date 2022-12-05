@@ -17,15 +17,15 @@ namespace ProjetoA3.Forms
             InitializeComponent();
         }
 
-        private void labelEntrada1_Click(object sender, EventArgs e)
+        private void labelEntradaA_Click(object sender, EventArgs e)
         {
-            if (labelEntrada1.Text == "0")
+            if (labelEntradaA.Text == "0")
             {
-                labelEntrada1.Text = "1";
+                labelEntradaA.Text = "1";
             }
             else
             {
-                labelEntrada1.Text = "0";
+                labelEntradaA.Text = "0";
             }
 
             PortaNor();
@@ -33,10 +33,10 @@ namespace ProjetoA3.Forms
 
         private void PortaNor()
         {
-            if (labelEntrada1.Text == "0" && labelEntrada2.Text == "0")
+            if (labelEntradaA.Text == "0" && labelEntradaB.Text == "0")
             {
-                pictureLedRed.Show();
-                pictureLedRed.BringToFront();
+                pictureLedGreen.Show();
+                pictureLedGreen.BringToFront();
             }
 
             else
@@ -46,15 +46,15 @@ namespace ProjetoA3.Forms
             }
         }
 
-        private void labelEntrada2_Click(object sender, EventArgs e)
+        private void labelEntradaB_Click(object sender, EventArgs e)
         {
-            if (labelEntrada2.Text == "0")
+            if (labelEntradaB.Text == "0")
             {
-                labelEntrada2.Text = "1";
+                labelEntradaB.Text = "1";
             }
             else
             {
-                labelEntrada2.Text = "0";
+                labelEntradaB.Text = "0";
             }
 
             PortaNor();
