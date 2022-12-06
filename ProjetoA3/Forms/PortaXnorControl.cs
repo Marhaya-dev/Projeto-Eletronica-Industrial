@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoA3.Forms
 {
-    public partial class PortaNxorControl : UserControl
+    public partial class PortaXnorControl : UserControl
     {
-        public PortaNxorControl()
+        public PortaXnorControl()
         {
             InitializeComponent();
         }
@@ -28,10 +28,10 @@ namespace ProjetoA3.Forms
                 labelEntradaA.Text = "0";
             }
 
-            PortaNxor();
+            PortaXnor();
         }
 
-        private void PortaNxor()
+        private void PortaXnor()
         {
             if (labelEntradaA.Text == "0" && labelEntradaB.Text == "0")
             {
@@ -63,12 +63,12 @@ namespace ProjetoA3.Forms
                 labelEntradaB.Text = "0";
             }
 
-            PortaNxor();
+            PortaXnor();
         }
 
-        private void PortaNxorControl_Load(object sender, EventArgs e)
+        private void PortaXnorControl_Load(object sender, EventArgs e)
         {
-            PortaNxor();
+            PortaXnor();
         }
     }
 }

@@ -39,7 +39,7 @@ namespace ProjetoA3.Forms
                 "OR",
                 "NOR",
                 "XOR",
-                "NXOR"
+                "XNOR"
             };
 
             comboBoxPortas.DataSource = new BindingSource(items, null);
@@ -82,9 +82,9 @@ namespace ProjetoA3.Forms
                     portaXorControl.BringToFront();
                     break;
 
-                case "NXOR":
-                    portaNxorControl.Show();
-                    portaNxorControl.BringToFront();
+                case "XNOR":
+                    portaXnorControl.Show();
+                    portaXnorControl.BringToFront();
                     break;
             };
         }

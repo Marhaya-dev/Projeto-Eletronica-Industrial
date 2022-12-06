@@ -1,6 +1,6 @@
 ﻿namespace ProjetoA3.Forms
 {
-    partial class PortaNxorControl
+    partial class PortaXnorControl
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortaNxorControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortaXnorControl));
             this.labelEntradaB = new System.Windows.Forms.Label();
             this.pictureLedGrey = new System.Windows.Forms.PictureBox();
             this.pictureLedGreen = new System.Windows.Forms.PictureBox();
@@ -112,7 +112,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 21);
             this.label1.TabIndex = 30;
-            this.label1.Text = "PORTA NXOR";
+            this.label1.Text = "PORTA XNOR";
             // 
             // pictureBox2
             // 
@@ -179,7 +179,7 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "    ";
             // 
-            // PortaNxorControl
+            // PortaXnorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,9 +193,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureLedGrey);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "PortaNxorControl";
+            this.Name = "PortaXnorControl";
             this.Size = new System.Drawing.Size(766, 365);
-            this.Load += new System.EventHandler(this.PortaNxorControl_Load);
+            this.Load += new System.EventHandler(this.PortaXnorControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGrey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLedGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
