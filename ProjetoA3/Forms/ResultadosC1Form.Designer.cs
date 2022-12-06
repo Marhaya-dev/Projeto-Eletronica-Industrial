@@ -33,25 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtgR1 = new System.Windows.Forms.DataGridView();
-            this.labelPotenciaGerador = new System.Windows.Forms.Label();
-            this.labelPotenciaReceptor = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.labelCorrenteTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgR1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(161, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Potência Gerador (W):";
             // 
             // dtgR1
             // 
@@ -103,44 +89,14 @@
             this.dtgR1.RowTemplate.Height = 25;
             this.dtgR1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dtgR1.ShowEditingIcon = false;
-            this.dtgR1.Size = new System.Drawing.Size(345, 182);
+            this.dtgR1.Size = new System.Drawing.Size(353, 232);
             this.dtgR1.TabIndex = 0;
-            // 
-            // labelPotenciaGerador
-            // 
-            this.labelPotenciaGerador.BackColor = System.Drawing.SystemColors.Window;
-            this.labelPotenciaGerador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPotenciaGerador.Location = new System.Drawing.Point(300, 211);
-            this.labelPotenciaGerador.Name = "labelPotenciaGerador";
-            this.labelPotenciaGerador.Size = new System.Drawing.Size(63, 26);
-            this.labelPotenciaGerador.TabIndex = 3;
-            this.labelPotenciaGerador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelPotenciaReceptor
-            // 
-            this.labelPotenciaReceptor.BackColor = System.Drawing.SystemColors.Window;
-            this.labelPotenciaReceptor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPotenciaReceptor.Location = new System.Drawing.Point(300, 247);
-            this.labelPotenciaReceptor.Name = "labelPotenciaReceptor";
-            this.labelPotenciaReceptor.Size = new System.Drawing.Size(63, 26);
-            this.labelPotenciaReceptor.TabIndex = 5;
-            this.labelPotenciaReceptor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(138, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Potência no Receptor (W):";
             // 
             // labelCorrenteTotal
             // 
             this.labelCorrenteTotal.BackColor = System.Drawing.SystemColors.Window;
             this.labelCorrenteTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelCorrenteTotal.Location = new System.Drawing.Point(300, 281);
+            this.labelCorrenteTotal.Location = new System.Drawing.Point(308, 259);
             this.labelCorrenteTotal.Name = "labelCorrenteTotal";
             this.labelCorrenteTotal.Size = new System.Drawing.Size(63, 26);
             this.labelCorrenteTotal.TabIndex = 7;
@@ -150,24 +106,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(184, 285);
+            this.label5.Location = new System.Drawing.Point(212, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 17);
+            this.label5.Size = new System.Drawing.Size(94, 17);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Corrente Total (A):";
+            this.label5.Text = "Corrente Total:";
             // 
             // ResultadosC1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 323);
+            this.ClientSize = new System.Drawing.Size(390, 298);
             this.Controls.Add(this.labelCorrenteTotal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelPotenciaReceptor);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelPotenciaGerador);
             this.Controls.Add(this.dtgR1);
-            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -183,11 +135,7 @@
         }
 
         #endregion
-        private Label label2;
         private DataGridView dtgR1;
-        private Label labelPotenciaGerador;
-        private Label labelPotenciaReceptor;
-        private Label label3;
         private Label labelCorrenteTotal;
         private Label label5;
     }

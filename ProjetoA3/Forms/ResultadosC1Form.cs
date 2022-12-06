@@ -51,7 +51,7 @@ namespace ProjetoA3.Forms
 
         private void LoadDtg(ResultadosC1 resultados)
         {
-            dtgR1.Columns.Add("resistor", "Resistor");
+            dtgR1.Columns.Add("elemento", "Elemento");
             dtgR1.Columns.Add("corrente", "Corrente (A)");
             dtgR1.Columns.Add("potencia", "Potência (W)");
 
@@ -61,12 +61,12 @@ namespace ProjetoA3.Forms
             dtgR1.Rows.Add(new object[] { "R4", $"{resultados.CorrenteR4:N2}", $"{resultados.PotenciaR4:N2}" });
             dtgR1.Rows.Add(new object[] { "R5", $"{resultados.CorrenteR5:N2}", $"{resultados.PotenciaR5:N2}" });
             dtgR1.Rows.Add(new object[] { "R6", $"{resultados.CorrenteR6:N2}", $"{resultados.PotenciaR6:N2}" });
+            dtgR1.Rows.Add(new object[] { "Gerador", $"{resultados.CorrenteR1:N2}", $"{resultados.PotenciaGerador:N2}" });
+            dtgR1.Rows.Add(new object[] { "Receptor", $"{resultados.CorrenteR3:N2}", $"{resultados.PotenciaReceptor:N2}" });
 
             dtgR1.ClearSelection();
 
-            labelPotenciaGerador.Text = resultados.PotenciaGerador.ToString("N2");
-            labelPotenciaReceptor.Text = resultados.PotenciaReceptor.ToString("N2");
-            labelCorrenteTotal.Text = resultados.CorrenteTotal.ToString("N2");
+            labelCorrenteTotal.Text = resultados.CorrenteTotal.ToString("N2") + " A";
         }
     }
 }
